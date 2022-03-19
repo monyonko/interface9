@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto+Condensed&display=swap');
+
+*{
+    margin:auto;
+    padding:auto;
+    box-sizing:border-box;
+    max-width: 100vw;
+}
+.container{
+    margin-bottom: 0;
+    overflow: hidden;
+}
+ul{
+    list-style: none;
+   
+}
+ul li{
+    display: inline-block;
+}
+.header{
+    font-weight: bold;
+    font-size: 3vh;
+}
+.first{
+    height:15vh;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+.first .logo{
+    float: left;
+    height:10vh;
+    width:inherit;
+    margin: auto;
+}
+.logo h3{
+    border: 0.5vh solid black;
+    padding-top: 3vh;
+}
+.first .nav-left, .left{
+    float:left;
+}
+.first .nav-right, .right{
+    float:right;
+}
+
+.first ul li{
+   text-transform: uppercase;
+   padding: 1vh; 
+   padding-top: 8vh;
+}
+.first .jude{
+    font-size: 1.5vh;
+    margin-right: 1vh;   
+}
+.first .profile{
+    background-color: gray;
+    border-radius: 50%;
+    padding:0.5vh;
+    overflow: hidden;
+}
+.dropdown{
+    display: none !important;
+    position: absolute;
+    top:16vh;
+    left:0;
+    width:100vw;
+    height:20vh !important;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin: auto;
+    z-index: 1;
+    border-radius: 0 0 0.5vh 0.5vh;
+}
+.dropdown-content{
+    flex:1;
+    display:flex;
+    height: 18vh;
+    flex-direction: column; 
+    padding-top: 3vh;  
+}
+.dropdown-content a{
+    flex:1;
+    padding: 1vh;
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+}
+.dropdown-content a:hover{
+    background-color: #bbb;
+}
+.membership:hover .one,.events:hover .two,.resource:hover .three,.training:hover .four{
+    display: flex !important;
+    
+}
+.nav-right form{
+    position:absolute;
+    top:0;
+    right:0;
+}
+.second {
+    height: 80vh;
+    background-color: rgb(18,126,54);
+}
+.carousel{
+    overflow: hidden;
+    width: 70vw;
+    height:78vh;
+    margin: 1vh auto 1vh auto;
+    justify-content:center;
+    margin-bottom: 2vh; 
+}
+.carousel .slideshow{
+    display:none;
+}
+.carousel img{
+    width: inherit;
+    height:inherit;   
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    top:50%;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border-radius: 3px 0 0 3px;
+} 
+/* Position the "next button" to the right */
+.next {right: 80px;}
+.prev {left: 80px;}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: #f1f1f1;
+} 
+.indicator{
+    position: absolute;
+    top:90vh;
+    left:45vw;   
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 2px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+background-color: black;
+} 
+.float{
+    position:fixed;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    width:15vw;
+    height:15vw;
+    left:-12vh;
+    top:40vh;
+}
+.float .item{
+    border-radius: 50%;
+    width:3vw;
+    height:3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.float a{
+    text-decoration: none;
+}
+.third{
+    height: 20vh;
+    margin-top: 2vh;
+    background: linear-gradient(90deg, rgb(18, 126, 54) 50%, transparent 50%), linear-gradient(90deg, rgb(18, 126, 54) 50%, transparent 50%), linear-gradient(0deg, rgb(18, 126, 54) 50%, transparent 50%), linear-gradient(0deg, rgb(18, 126, 54) 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 15px 4px, 15px 4px, 4px 15px, 4px 15px;
+    animation: border-dance 10s infinite linear;
+    text-align: center;
+}
+@keyframes border-dance {
+    0% {
+      background-position: 0 0, 100% 100%, 0 100%, 100% 0;
+    }
+    100% {
+      background-position: 100% 0, 0 100%, 0 0, 100% 100%;
+    }
+  }
+.third img{
+    float: left;
+    height: 20vh;
+    width: 20vw;
+    padding: 3vh;
+   
+}
+.third p{
+    float:left;
+    padding-top: calc(5vh );
+    font-size: 5vh;
+  
+}
+.four{
+    display: flex;
+    height: 50vh;
+    
+}
+.four> div{
+    flex:1;
+    margin:2vh;
+    background: linear-gradient(to right,rgb(255, 255, 255),rgb(250, 249, 249), rgb(245, 240, 240),rgb(236, 235, 235));
+    text-align: center;
+    
+}
+.five>div {
+    flex:1;
+    margin: 2vh;
+    font-size: 5vh;
+    text-align: center;
+    border-right: 0.1vh solid rgb(236, 235, 235) ;
+    background: linear-gradient(to right,
+    rgb(247, 231, 7), orange, rgb(36, 107, 68), rgb(21, 102, 34),rgb(18, 126, 54));
+}
+.four img{
+    width:20vw;
+    height:25vh;
+    text-align: center;
+    padding:3vh 3vh 0 3vh;
+} 
+.four p{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    background-color: transparent;
+    width: 20vw;
+    text-align: justify;
+    padding-left: 3vh;
+    
+}
+.five{
+    display:flex;
+    height:10vh;
+}
+.six{
+    height:30vh;
+    background-color: rgb(18, 126, 54);
+}
+.carousel2{
+    position: relative;
+    width: 100vw;
+    height:30vh;
+}
+.carousel2 img{
+    width:100vw;
+    height:30vh;
+    display: none;
+}
+.carousel2 img.active{
+    display: inline-block;
+}
+.six .prevBtn, .six .nextBtn{
+    float: left;
+    margin-top: -15vh;
+    cursor: pointer;
+    position: absolute;
+}
+.six .prevBtn{
+    position: relative;
+    margin-left: 5vw;
+    z-index: 100;
+}
+.six .nextBtn{
+    position: relative;
+    margin-left: 90vw;
+    z-index: 100;
+}
+.seven{
+    height: 40vh;
+    display:flex;
+    margin: 2vh;
+}
+.seven .left{
+    flex:1;
+    height: inherit;
+    margin-right: 2vh;
+    background: linear-gradient(to right,rgb(255, 255, 255),rgb(250, 249, 249), rgb(245, 240, 240),rgb(236, 235, 235),rgb(18,121,60), rgb(18,126,54));
+}
+.seven .right{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    font-size: 5vh;
+    text-align: center;
+}
+.seven ul{
+    list-style-type:square;   
+}
+.seven ul li{
+    display:list-item;
+    height: auto;
+}
+
+.seven .right a{
+    flex: 1;
+    text-decoration: none;
+    background-color: orange;
+    width: inherit;
+    margin: 1vh;
+    border-radius: 1vh;
+    color: black;
+    padding-top: 1vh;
+   
+}
+.ten{
+    height:70vh;
+    display:flex;
+    margin-bottom: 0.5vh;
+}
+.ten .legislation{
+    flex:1;
+    margin-right: 3vh;
+    background-color: #bbb;
+    height: inherit;
+}
+.legislation img{
+    width: 100%;
+    height:calc(70vh/2);
+}
+.ten p{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    background-color: transparent;
+    width: 20vw;
+    text-align: justify;
+    padding-left: 3vh;
+}
+
+.ten .carousel2 {
+    flex: 3;
+    height:inherit;
+    background-image: cover;
+}
+.ten .carousel2 > div{
+    width: 100%;
+    height: 65vh;
+    background-repeat: no-repeat;
+    display: none;
+}
+.ten .carousel2 > div.active{
+    display: inline-block;
+
+}
+.ten .carousel2 .body{
+    width:100%
+
+}
+.ten .prevBtn, .ten .nextBtn{
+    float: left;
+    margin-top: 200px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+}
+.ten .prevBtn{
+    margin-left: 400px;
+    z-index: 100;
+}
+.ten .nextBtn{
+    margin-left: 1200px;
+    z-index: 100;
+}
+
+.eight{
+    height:20vh;
+    text-align: center;
+    margin: 2vh;
+}
+.eight .partners{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.partners>div{
+    flex:1;
+}
+.partners img{
+    height:10vh;
+}
+.partners p{
+    font-weight: bold;
+}
+.nine{
+    height:10vh;
+    background-color: rgb(18, 126, 54);
+}
+
+.eleven{
+    height: 25vh;
+    text-align: center;
+    background: linear-gradient(to right,rgb(255, 255, 255),rgb(250, 249, 249), rgb(245, 240, 240),rgb(236, 235, 235));
+    padding: 1vh;
+    
+}
+
+
+

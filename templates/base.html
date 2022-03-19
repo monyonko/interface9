@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css" integrity="sha512-E+53kXnJyuZFSz75xSmTfCpUNj3gp9Bd80TeQQMTPJTVWDRHPOpEYczGwWtsZXvaiz27cqvhdH8U+g/NMYua3A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <title>{%block title%}{%endblock%}</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            <div class="logo">
+                <h3 class="logo">LOGO</h3>
+                <p>Company's <br> Name</p>
+            </div>
+            
+            <ul class="nav-left">
+                <li class="main">Home</li>
+                <li>About</li>
+                <li class="membership">Membership
+                    <ul class="dropdown one">
+                        <div  style="border-right: 0.1vh solid black;" class="dropdown-content">
+                            <a href="">Technicians</a>
+                            <a href="">Technologists</a>
+                            <a href="">Graduate</a>
+                        </div> 
+                        
+
+                        <div style="border-right: 0.1vh solid black;" class="dropdown-content"  >
+                            <a href="">Diploma</a>
+                            <a href="">Professional</a>
+                            <a href="">Associate</a>
+                        </div>
+                        
+                        <div class="dropdown-content">
+                            <a href="">ID Application</a>
+                            <a href="">Registration</a> 
+                            <a href="">Partner</a> 
+                        </div>
+                    </ul>
+                    <i class="fas fa-chevron-down jude jude1"></i>
+                </li>
+                <li class="events">Events
+                    <ul class="dropdown two" >  
+                        <div  style="border-right: 0.1vh solid black;" class="dropdown-content ">
+                            <a href="">Jubilee celebration</a>
+                            <a href="">Launch of some engine</a>
+                            <a href="">Opening of the Juja branch</a>
+                        </div> 
+                        <div style="border-right: 0.1vh solid black;" class="dropdown-content"  >
+                            <a href="">Nairobi river cleanup</a>
+                            <a href="">Tree planting</a>
+                            <a href="">Road authorization</a>
+                        </div>
+                        
+                        <div class="dropdown-content">
+                            <a href="">Innovation Expo</a>
+                            <a href="">Competitions</a> 
+                            <a href="">Equipment Testing</a> 
+                        </div>                 
+                        <i class="fas fa-chevron-down jude jude2"></i>
+                    </ul>
+                </li>
+                <li class="resource">Resource Centre
+                    <ul class="dropdown three" > 
+                        <div  style="border-right: 0.1vh solid black;" class="dropdown-content">
+                            <a href="">Engineering Literature</a>
+                            <a href="">Engineering Malpractise</a>
+                            <a href="">Engineering Magazine</a>
+                        </div> 
+                        <div style="border-right: 0.1vh solid black;" class="dropdown-content"  >
+                            <a href="">Competence and Quality</a>
+                            <a href="">Latest Innovations</a>
+                            <a href="">Benchmark News</a>
+                        </div>
+                        
+                        <div class="dropdown-content">
+                            <a href="">CPD points</a>
+                            <a href="">Tenders</a> 
+                            <a href="">Blog</a> 
+                        </div>                 
+                    
+                    </ul>
+                    <i class="fas fa-chevron-down jude jude3"></i>
+                </li>
+                <li class="training">Training and Development
+                    <div class="dropdown four">
+                        <ul class="dropdown-content">
+                            <a href="">Professional Development</a>
+                            <a href="">Article collaboration</a>
+                            <a href="">CPD points</a>
+                        </ul>
+
+                    </div>
+                    
+                    <i class="fas fa-chevron-down jude jude4"></i>
+                </li>
+                <li>Careers</li>
+                <li>Help</li>
+                
+            </ul>
+            <ul class="nav-right">
+                <li onclick="search()">
+                    <i class="fa fa-search search"></i>
+                    <form class="example" action="">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                  </form>
+                <li>
+                    <a class="profile" href=""><i class="fa fa-user" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        
+        </div>
+        
+        <div class="second">
+            <div class="carousel carousel1">
+                <img class="slideshow" src="../static/img/0.jpg" alt="">
+                <img class="slideshow" src="{{url_for('static', filename='img/1.jpg')}}" alt="">
+                <img class="slideshow" src="{{url_for('static', filename='img/2.jpg')}}" alt="">
+                <img class="slideshow" src="{{url_for('static', filename='img/3.jpg')}}" alt="">
+                <img class="slideshow" src="{{url_for('static', filename='img/4.jpg')}}" alt="">
+                <img class="slideshow" src="{{url_for('static', filename='img/5.jpg')}}" alt="">
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="nextImage(-1)">&#10094;</a>
+                <a class="next" onclick="nextImage(1)">&#10095;</a>
+            </div>
+            <div class="indicator" style="text-align:center;">
+                <span class="dot" onclick="currentImage(1)"></span>
+                <span class="dot" onclick="currentImage(2)"></span>
+                <span class="dot" onclick="currentImage(3)"></span>
+                <span class="dot" onclick="currentImage(4)"></span>
+                <span class="dot" onclick="currentImage(5)"></span>
+                <span class="dot" onclick="currentImage(6)"></span>
+            </div>    
+                
+        </div>
+        <div class="third">
+            <img src="../static/img/budget.PNG" alt="">
+            <p>
+                Have you renewed your membership yet?<br>
+                <a href="" style="text-decoration: none;">Click here to renew.....</a>
+            </p>
+        
+        </div>
+        <div class="four">
+            <div class="moja">
+                <img src="../static/img/bitcoin1.PNG" alt="">
+                <p class="header">Competence and Quality</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi accusantium ex autem corporis vero deserunt temporibus nulla. Eveniet, necessitatibus fuga perferendis delectus amet, assumenda cupiditate quisquam sapiente nobis voluptatibus explicabo.</p>
+            </div>
+            <div class="mbili">
+                <img src="../static/img/bitcoin2.PNG" alt="">
+                <p class="header">Registration</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum velit soluta asperiores. Quae magni nam beatae aperiam cum! Qui molestias ab harum dolore ut nostrum officiis vel ullam. Doloremque, eius.
+                Provident, voluptatum. Laborum, eius? Quibusdam blanditiis fuga libero ea aperiam, natus dolorum dolore praesentium quo soluta hic repudiandae debitis. Similique, obcaecati! Numquam quod cum, qui sit architecto magni aliquid nostrum?
+                Quod, hic esse voluptatibus eum illum, dolorem eligendi fuga ipsam, molestias quibusdam voluptate incidunt velit error. Sequi quam, reprehenderit laudantium culpa accusamus expedita? Repellat magnam, iure sunt eum aut doloribus.
+                Repellat tempora architecto dolores tenetur magnam aliquam hic repudiandae necessitatibus perferendis consequatur saepe accusamus enim ut voluptatem, voluptatum labore voluptas distinctio. Suscipit, quis possimus! Temporibus neque harum optio accusantium adipisci.
+                Beatae quisquam perspiciatis asperiores, quos nulla ex sapiente deserunt fugit dolorem laudantium tenetur excepturi, optio impedit porro sint cupiditate vel? Alias vel repellendus impedit quae numquam ipsa cumque vero tenetur!</p>
+            </div>
+            <div class="tatu">
+                <img src="../static/img/bitcoin2.PNG" alt="">
+                <p class="header">Careers</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates nostrum delectus sit eaque officiis? Rerum, accusamus. Non ab laudantium fuga provident, optio cupiditate rerum sint voluptate cum laborum asperiores perspiciatis?
+                Minima repellendus voluptas voluptatum dolore praesentium in sapiente, recusandae esse veniam nobis quam. Quo iure sequi reprehenderit doloribus. Odio nihil enim quas, at sit itaque iure repudiandae veritatis harum quia.</p>
+            </div>
+            <div class="nne">
+                <img src="../static/img/bitcoin3.PNG" alt="">
+                <p class="header">Engineering Standards</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quidem beatae a optio placeat at veritatis tempore quaerat eius, magnam iste commodi enim temporibus possimus quia itaque debitis adipisci. Quidem.
+                Exercitationem sunt amet, deserunt molestias veritatis ea deleniti enim reiciendis distinctio, cupiditate provident neque harum sit dolore? A, molestiae quos recusandae aspernatur vel deserunt corporis dignissimos quae eaque laboriosam aperiam.
+                Dolor doloremque provident nostrum possimus itaque molestias molestiae corporis vel commodi, reprehenderit minus et tempore facilis labore iusto fuga nesciunt totam omnis nulla, quo placeat reiciendis ex libero! Omnis, quam.
+                Aperiam porro impedit quam asperiores excepturi suscipit, esse tempora cumque repudiandae qui rem autem architecto consectetur eius optio. Mollitia quibusdam amet quis aliquam excepturi dolore ab maiores iste soluta esse.
+                Rem quo itaque, voluptas debitis deserunt nam dicta laboriosam accusamus, ut consequatur quaerat! Inventore natus deserunt eaque vel soluta accusamus totam harum maiores, eos nesciunt tenetur nihil laboriosam necessitatibus praesentium!
+                Fugiat beatae voluptatem ex suscipit perspiciatis error. Repellendus, animi nam laboriosam nostrum deleniti ipsa voluptates nihil facere alias quia reprehenderit veniam ipsam ad nemo aliquid. Nulla quidem quos minus nobis?</p>
+            </div>
+        </div>
+        <div class="five">
+            <div class="one">
+                <p>Latest Highlights</p>
+            </div>
+            <div class="two">
+                <p>Tenders</p>
+            </div>
+            <div class="three">
+                <p>ID Application</p>
+            </div>
+        </div>
+        <div class="six">
+            <!-- Carousel showing blog articles/newsletter articles-->          
+            <div class=" carousel2" >
+                <img class="slide active" src="../static/img/bitcoin1.PNG" alt="">
+                <img class="slide" src="../static/img/bitcoin2.PNG" alt="">
+                <img class="slide" src="../static/img/bitcoin3.PNG" alt="">
+                <img class="slide" src="../static/img/bitcoin1.PNG" alt="">
+                <img class="slide" src="../static/img/bitcoin2.PNG" alt="">
+            </div>
+            <a class="prevBtn" >&#10094;</a> 
+            <a class="nextBtn" >&#10095;</a>
+        </div>
+        <div class="seven">
+            <div class="left">
+                <p class="header">Related Links</p>
+                <ul>
+                    <li>something</li>
+                    <li>something</li>
+                    <li>something</li>
+                    <li>something</li>
+                    <li>something</li>
+                    <li>something</li>
+                    <li>something</li>
+                    <li>something</li>
+                    <li>something</li>
+                    <li>something</li>
+                </ul>
+            </div>
+            <div class="right">
+                
+                <a href="">Whistle blowing</a>
+                <a href="">Share feedback</a>
+                <a href="">Professional Misconduct</a>
+            </div>
+        </div> 
+        <div class="eleven">
+            <div class="upcoming">
+                <h1 style="padding-bottom: 1vh;">Upcoming Event</h1>
+                <p class="header">Sustainable Development in Engineering</p>
+                <p>Kenya National Theatre, Nairobi</p>
+                <p>10/10/2022 as from 8.00 a.m</p>
+                <span class="time countdown" id="display" style="font-weight: bold;font-size: 5vh;"></span><br>
+                <a href="">More details...</a>
+            </div>
+        </div>
+        
+        <div class="ten">
+            <div class="legislation">
+                <img src="../static/img/bitcoin2.PNG" alt="">
+                <p class="header">Legal Section</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates mollitia, dolorum facere commodi eum dignissimos numquam debitis facilis quam harum blanditiis amet quod, sint laboriosam aliquid placeat? Enim, animi quod.
+                Voluptate commodi sed velit quibusdam fuga unde vitae facilis ipsam voluptatibus ipsa sint, et dolore natus impedit sapiente officia quae similique id, illo tenetur dolorem! Non a modi tempora blanditiis.
+                Corrupti nobis maxime earum accusantium dolores? Dolore facilis nisi iste molestiae amet itaque ratione aliquam. Ut dicta sapiente velit? Facere libero alias possimus ratione facilis voluptatem incidunt totam aperiam animi?
+                Consequuntur accusamus optio vel dignissimos sapiente facere natus ipsum sit atque expedita dolorem blanditiis sunt maxime error possimus saepe quaerat, neque id labore hic. Esse quaerat aliquam neque reprehenderit earum?
+                Sapiente, earum, in necessitatibus magnam animi, voluptatum aliquid ea assumenda ab quas nihil voluptatibus deserunt perspiciatis? Laborum a molestias aut aperiam, placeat temporibus tempore eos repudiandae possimus in assumenda quos.</p>
+            </div>
+            <div class=" carousel2" >
+                <h1 style="text-align: center;">ONGOING PROJECTS</h1>
+                <div class="slide active" style="background-image: url(../static/img/bitcoin1.PNG); background-size: cover; background-repeat: no-repeat;">
+                    <p class="header">Kindaruma Construction</p>
+                    <p class="body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae assumenda molestias minus magnam commodi dolor sapiente asperiores voluptatem harum cumque, corporis nemo officia unde quasi necessitatibus quisquam quis odit. Adipisci.
+                    Vitae magnam ullam totam ducimus pariatur rem delectus dolorem, accusamus repudiandae similique exercitationem architecto enim eos deserunt facilis, amet quibusdam tenetur quos magni atque quis a. Minus libero temporibus autem?
+                    Exercitationem nostrum vero corrupti nam autem eius, ex unde assumenda ipsam magni. Impedit odit vel rem soluta nihil mollitia enim eum explicabo dolore similique earum excepturi consectetur, pariatur voluptas eveniet!
+                    Ipsum libero laborum magnam enim accusantium unde et dolore possimus officiis quisquam nihil officia, cumque distinctio quaerat molestiae deserunt ducimus reiciendis sequi ad incidunt. Dolores vitae dolorem doloremque blanditiis accusantium?
+                    Repudiandae reiciendis fuga architecto? Beatae molestias distinctio, aliquid magnam excepturi sapiente quidem eveniet deleniti reiciendis repellendus voluptatem doloribus asperiores nostrum eligendi quae vero? Nemo suscipit, quod doloremque voluptatem optio iste?
+                    Veritatis laudantium et laborum nisi suscipit excepturi reiciendis corporis qui. Molestias quidem omnis natus, odio magni ex totam harum reiciendis voluptatibus ab iure repudiandae non vero, velit ullam doloremque molestiae.
+                    Quaerat dignissimos illo corrupti eveniet aliquid! Necessitatibus at in voluptas pariatur doloribus earum et, nihil minus magnam quod natus? Necessitatibus, harum. Fugit id porro laboriosam perspiciatis quos soluta, quia ipsa.
+                    Obcaecati commodi delectus voluptate? Consequuntur laborum accusantium, illum ipsa necessitatibus enim a magni deserunt atque commodi pariatur nemo officiis temporibus quis aliquid, veritatis dicta. Amet error eius veniam sapiente quis!
+                    Enim porro at facere! Dicta aliquid sequi, expedita maiores quis nostrum aliquam, similique corrupti sit neque fugiat. Voluptatum impedit cum perferendis amet praesentium incidunt aspernatur, corrupti reiciendis ipsam odit eos!
+                    Hic reiciendis, iusto quod rem possimus dignissimos minima deserunt? Eveniet voluptatibus illum doloribus sequi laboriosam vel error, ducimus placeat recusandae fuga iure. Nostrum quos ipsum consequatur numquam unde, ab omnis.</p>
+
+                </div>
+                <div class="slide" style="background-image: url(../static/img/bitcoin2.PNG); background-size: cover; background-repeat: no-repeat;">
+                    <p class="header"></p>
+                    <p class="body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae assumenda molestias minus magnam commodi dolor sapiente asperiores voluptatem harum cumque, corporis nemo officia unde quasi necessitatibus quisquam quis odit. Adipisci.
+                    Vitae magnam ullam totam ducimus pariatur rem delectus dolorem, accusamus repudiandae similique exercitationem architecto enim eos deserunt facilis, amet quibusdam tenetur quos magni atque quis a. Minus libero temporibus autem?
+                    Exercitationem nostrum vero corrupti nam autem eius, ex unde assumenda ipsam magni. Impedit odit vel rem soluta nihil mollitia enim eum explicabo dolore similique earum excepturi consectetur, pariatur voluptas eveniet!
+                    Ipsum libero laborum magnam enim accusantium unde et dolore possimus officiis quisquam nihil officia, cumque distinctio quaerat molestiae deserunt ducimus reiciendis sequi ad incidunt. Dolores vitae dolorem doloremque blanditiis accusantium?
+                    Repudiandae reiciendis fuga architecto? Beatae molestias distinctio, aliquid magnam excepturi sapiente quidem eveniet deleniti reiciendis repellendus voluptatem doloribus asperiores nostrum eligendi quae vero? Nemo suscipit, quod doloremque voluptatem optio iste?
+                    Veritatis laudantium et laborum nisi suscipit excepturi reiciendis corporis qui. Molestias quidem omnis natus, odio magni ex totam harum reiciendis voluptatibus ab iure repudiandae non vero, velit ullam doloremque molestiae.
+                    Quaerat dignissimos illo corrupti eveniet aliquid! Necessitatibus at in voluptas pariatur doloribus earum et, nihil minus magnam quod natus? Necessitatibus, harum. Fugit id porro laboriosam perspiciatis quos soluta, quia ipsa.
+                    Obcaecati commodi delectus voluptate? Consequuntur laborum accusantium, illum ipsa necessitatibus enim a magni deserunt atque commodi pariatur nemo officiis temporibus quis aliquid, veritatis dicta. Amet error eius veniam sapiente quis!
+                    Enim porro at facere! Dicta aliquid sequi, expedita maiores quis nostrum aliquam, similique corrupti sit neque fugiat. Voluptatum impedit cum perferendis amet praesentium incidunt aspernatur, corrupti reiciendis ipsam odit eos!
+                    Hic reiciendis, iusto quod rem possimus dignissimos minima deserunt? Eveniet voluptatibus illum doloribus sequi laboriosam vel error, ducimus placeat recusandae fuga iure. Nostrum quos ipsum consequatur numquam unde, ab omnis.</p>
+
+                </div>
+                
+                <div class="slide" style="background-image: url(../static/img/bitcoin3.PNG); background-size: cover; background-repeat: no-repeat;">
+                    <p class="header"></p>
+                    <p class="body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae assumenda molestias minus magnam commodi dolor sapiente asperiores voluptatem harum cumque, corporis nemo officia unde quasi necessitatibus quisquam quis odit. Adipisci.
+                    Vitae magnam ullam totam ducimus pariatur rem delectus dolorem, accusamus repudiandae similique exercitationem architecto enim eos deserunt facilis, amet quibusdam tenetur quos magni atque quis a. Minus libero temporibus autem?
+                    Exercitationem nostrum vero corrupti nam autem eius, ex unde assumenda ipsam magni. Impedit odit vel rem soluta nihil mollitia enim eum explicabo dolore similique earum excepturi consectetur, pariatur voluptas eveniet!
+                    Ipsum libero laborum magnam enim accusantium unde et dolore possimus officiis quisquam nihil officia, cumque distinctio quaerat molestiae deserunt ducimus reiciendis sequi ad incidunt. Dolores vitae dolorem doloremque blanditiis accusantium?
+                    Repudiandae reiciendis fuga architecto? Beatae molestias distinctio, aliquid magnam excepturi sapiente quidem eveniet deleniti reiciendis repellendus voluptatem doloribus asperiores nostrum eligendi quae vero? Nemo suscipit, quod doloremque voluptatem optio iste?
+                    Veritatis laudantium et laborum nisi suscipit excepturi reiciendis corporis qui. Molestias quidem omnis natus, odio magni ex totam harum reiciendis voluptatibus ab iure repudiandae non vero, velit ullam doloremque molestiae.
+                    Quaerat dignissimos illo corrupti eveniet aliquid! Necessitatibus at in voluptas pariatur doloribus earum et, nihil minus magnam quod natus? Necessitatibus, harum. Fugit id porro laboriosam perspiciatis quos soluta, quia ipsa.
+                    Obcaecati commodi delectus voluptate? Consequuntur laborum accusantium, illum ipsa necessitatibus enim a magni deserunt atque commodi pariatur nemo officiis temporibus quis aliquid, veritatis dicta. Amet error eius veniam sapiente quis!
+                    Enim porro at facere! Dicta aliquid sequi, expedita maiores quis nostrum aliquam, similique corrupti sit neque fugiat. Voluptatum impedit cum perferendis amet praesentium incidunt aspernatur, corrupti reiciendis ipsam odit eos!
+                    Hic reiciendis, iusto quod rem possimus dignissimos minima deserunt? Eveniet voluptatibus illum doloribus sequi laboriosam vel error, ducimus placeat recusandae fuga iure. Nostrum quos ipsum consequatur numquam unde, ab omnis.</p>
+
+                </div>
+                <div class="slide" style="background-image: url(../static/img/bitcoin1.PNG); background-size: cover; background-repeat: no-repeat;">
+                    <p class="header"></p>
+                    <p class="body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae assumenda molestias minus magnam commodi dolor sapiente asperiores voluptatem harum cumque, corporis nemo officia unde quasi necessitatibus quisquam quis odit. Adipisci.
+                    Vitae magnam ullam totam ducimus pariatur rem delectus dolorem, accusamus repudiandae similique exercitationem architecto enim eos deserunt facilis, amet quibusdam tenetur quos magni atque quis a. Minus libero temporibus autem?
+                    Exercitationem nostrum vero corrupti nam autem eius, ex unde assumenda ipsam magni. Impedit odit vel rem soluta nihil mollitia enim eum explicabo dolore similique earum excepturi consectetur, pariatur voluptas eveniet!
+                    Ipsum libero laborum magnam enim accusantium unde et dolore possimus officiis quisquam nihil officia, cumque distinctio quaerat molestiae deserunt ducimus reiciendis sequi ad incidunt. Dolores vitae dolorem doloremque blanditiis accusantium?
+                    Repudiandae reiciendis fuga architecto? Beatae molestias distinctio, aliquid magnam excepturi sapiente quidem eveniet deleniti reiciendis repellendus voluptatem doloribus asperiores nostrum eligendi quae vero? Nemo suscipit, quod doloremque voluptatem optio iste?
+                    Veritatis laudantium et laborum nisi suscipit excepturi reiciendis corporis qui. Molestias quidem omnis natus, odio magni ex totam harum reiciendis voluptatibus ab iure repudiandae non vero, velit ullam doloremque molestiae.
+                    Quaerat dignissimos illo corrupti eveniet aliquid! Necessitatibus at in voluptas pariatur doloribus earum et, nihil minus magnam quod natus? Necessitatibus, harum. Fugit id porro laboriosam perspiciatis quos soluta, quia ipsa.
+                    Obcaecati commodi delectus voluptate? Consequuntur laborum accusantium, illum ipsa necessitatibus enim a magni deserunt atque commodi pariatur nemo officiis temporibus quis aliquid, veritatis dicta. Amet error eius veniam sapiente quis!
+                    Enim porro at facere! Dicta aliquid sequi, expedita maiores quis nostrum aliquam, similique corrupti sit neque fugiat. Voluptatum impedit cum perferendis amet praesentium incidunt aspernatur, corrupti reiciendis ipsam odit eos!
+                    Hic reiciendis, iusto quod rem possimus dignissimos minima deserunt? Eveniet voluptatibus illum doloribus sequi laboriosam vel error, ducimus placeat recusandae fuga iure. Nostrum quos ipsum consequatur numquam unde, ab omnis.</p>
+
+                </div>
+                <div class="slide" style="background-image: url(../static/img/bitcoin2.PNG); background-size: cover; background-repeat: no-repeat;">
+                    <p class="header"></p>
+                    <p class="body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae assumenda molestias minus magnam commodi dolor sapiente asperiores voluptatem harum cumque, corporis nemo officia unde quasi necessitatibus quisquam quis odit. Adipisci.
+                    Vitae magnam ullam totam ducimus pariatur rem delectus dolorem, accusamus repudiandae similique exercitationem architecto enim eos deserunt facilis, amet quibusdam tenetur quos magni atque quis a. Minus libero temporibus autem?
+                    Exercitationem nostrum vero corrupti nam autem eius, ex unde assumenda ipsam magni. Impedit odit vel rem soluta nihil mollitia enim eum explicabo dolore similique earum excepturi consectetur, pariatur voluptas eveniet!
+                    Ipsum libero laborum magnam enim accusantium unde et dolore possimus officiis quisquam nihil officia, cumque distinctio quaerat molestiae deserunt ducimus reiciendis sequi ad incidunt. Dolores vitae dolorem doloremque blanditiis accusantium?
+                    Repudiandae reiciendis fuga architecto? Beatae molestias distinctio, aliquid magnam excepturi sapiente quidem eveniet deleniti reiciendis repellendus voluptatem doloribus asperiores nostrum eligendi quae vero? Nemo suscipit, quod doloremque voluptatem optio iste?
+                    Veritatis laudantium et laborum nisi suscipit excepturi reiciendis corporis qui. Molestias quidem omnis natus, odio magni ex totam harum reiciendis voluptatibus ab iure repudiandae non vero, velit ullam doloremque molestiae.
+                    Quaerat dignissimos illo corrupti eveniet aliquid! Necessitatibus at in voluptas pariatur doloribus earum et, nihil minus magnam quod natus? Necessitatibus, harum. Fugit id porro laboriosam perspiciatis quos soluta, quia ipsa.
+                    Obcaecati commodi delectus voluptate? Consequuntur laborum accusantium, illum ipsa necessitatibus enim a magni deserunt atque commodi pariatur nemo officiis temporibus quis aliquid, veritatis dicta. Amet error eius veniam sapiente quis!
+                    Enim porro at facere! Dicta aliquid sequi, expedita maiores quis nostrum aliquam, similique corrupti sit neque fugiat. Voluptatum impedit cum perferendis amet praesentium incidunt aspernatur, corrupti reiciendis ipsam odit eos!
+                    Hic reiciendis, iusto quod rem possimus dignissimos minima deserunt? Eveniet voluptatibus illum doloribus sequi laboriosam vel error, ducimus placeat recusandae fuga iure. Nostrum quos ipsum consequatur numquam unde, ab omnis.</p>
+
+                </div>
+                
+            </div>
+            <a class="prevBtn" >&#10094;</a> 
+            <a class="nextBtn" >&#10095;</a>
+        
+        </div>
+        <div class="floatingButton">
+            
+        </div>
+        <div class="eight">
+            <h3 style="text-transform: uppercase;">Our Partners</h3>
+            <div class="partners">
+                <div class="hulla">
+                    <img src="" alt="">
+                    <p>Hulla</p>
+                </div>
+                <div class="chrimbo">
+                    <img src="" alt="">
+                    <p>Chrimbo</p>
+                </div>
+                <div class="mohoja">
+                    <img src="" alt="">
+                    <p>Mohoja</p>
+                </div>
+                <div class="riendo">
+                    <img src="" alt="">
+                    <p>Riendo</p>
+                </div>
+                <div class="muzina">
+                    <img src="" alt="">
+                    <p>Muzina</p>
+                </div>
+                <div class="kizito">
+                    <img src="" alt="">
+                    <p>Kizito</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nine">
+            <p class="left" style="font-weight: bold;">cc</p>
+            <div class="right">
+                <p style="font-weight: bold;">Join our mailing team</p><br>
+                <label for="">Email : </label>
+                <input type="text">
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <div class="floating-button">
+            <div class="float">
+                <a href="" class="item" title="ebk@twitter.com" ><i class="fa-brands fa-twitter" ></i></a>
+                <a href="" class="item" title="ebk@instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="" class="item" title="ebk@linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="" class="item" title="ebk@facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="" class="item" title="ebk@youtube.com"><i class="fa-brands fa-youtube"></i></a>    
+            </div>
+
+        </div>
+            
+
+    </div>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>!window.jQuery && document.write('<script src="jquery-1.4.2.min.js"><\/script>')</script>
+    <script src="../static/js/main.js"></script> 
+    <script src="../static/js/second.js"></script> 
+    <script src="../static/js/countdown.js"></script> 
+ 
+    
+</body>
+</html>
+
